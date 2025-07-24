@@ -28,7 +28,7 @@ spec:
       - envFrom:
         - secretRef:
             name: autotrade-binance-secret
-        image: 172.10.30.11:5000/auto-coin/autotrade-binance-app:v0.5
+        image: 172.10.30.11:5000/auto-coin/autotrade-binance:v0.2
         imagePullPolicy: IfNotPresent
         name: autotrade-binance
         resources: {}
