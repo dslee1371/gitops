@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: autotrade-binance-dash
+  name: autotrade-binance-dash
+  namespace: coinauto
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: autotrade-binance-dash
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: autotrade-binance-dash
+    spec:
+      containers:
+      - envFrom:
+        - secretRef:
+            name: autotrade-binance-dash-secret
+        image: 172.10.30.11:5000/auto-coin/autotrade-binance-dash:v0.6
+        imagePullPolicy: IfNotPresent
+        name: autotrade-binance-dash
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
