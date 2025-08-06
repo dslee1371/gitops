@@ -15,4 +15,4 @@ resources:
 # 이미지 태그 오버레이 (필요 시 버전만 변경)
 images:
   - name: 172.10.30.11:5000/naver-rs-scraper/scraper_trade_rs_stream:v0.5
-    newTag: v0.7
+    newTag: v0.8
