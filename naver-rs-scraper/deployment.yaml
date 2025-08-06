@@ -30,7 +30,11 @@ spec:
           imagePullPolicy: Always
           name: container-0
           ports:
-            - containerPort: 8501
+            - name: ui
+              containerPort: 8501
+              protocol: TCP
+            - name: metric
+              containerPort: 8000
               protocol: TCP
           resources: {}
           securityContext:
