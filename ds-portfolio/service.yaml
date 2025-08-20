@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ds-portfolio-app-service
+  namespace: ds-portfolio
+spec:
+  selector:
+    app: ds-portfolio-app
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
