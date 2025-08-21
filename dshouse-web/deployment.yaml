@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: dshouse-web
+  name: dshouse-web
+  namespace: dshouse-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dshouse-web
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: dshouse-web
+    spec:
+      containers:
+      - image: 172.10.30.11:5000/dshouse-web/dshouse-web:v0.2
+        name: dshouse-web
+        resources: {}
+status: {}
