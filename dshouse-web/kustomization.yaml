@@ -12,7 +12,7 @@ commonLabels:
 resources:
   - deployment.yaml
   - service.yaml
-  - ingress.yaml
+  - virtualservice.yaml
 
 # 이미지 태그 오버레이 (필요 시 버전만 변경)
 images:
