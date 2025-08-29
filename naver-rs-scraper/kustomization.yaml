@@ -11,6 +11,7 @@ commonLabels:
 # 리소스 목록
 resources:
   - deployment.yaml
+  - virtualservice.yaml
 
 # 이미지 태그 오버레이 (필요 시 버전만 변경)
 images:
