@@ -3,9 +3,6 @@ kind: Deployment
 metadata:
   labels:
     app: autotrade-binance
-    version: v0.878
-    app.kubernetes.io/name: autotrade-binance
-    app.kubernetes.io/version: "v0.878"
   name: autotrade-binance
   namespace: coinauto
 spec:
@@ -25,6 +22,9 @@ spec:
       creationTimestamp: null
       labels:
         app: autotrade-binance
+        version: v0.878
+        app.kubernetes.io/name: autotrade-binance
+        app.kubernetes.io/version: "v0.878"
     spec:
       containers:
       - envFrom:
