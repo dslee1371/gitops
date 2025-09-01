@@ -22,6 +22,9 @@ spec:
       creationTimestamp: null
       labels:
         app: autotrade-binance-dash
+        version: v0.879
+        app.kubernetes.io/name: autotrade-binance-dash
+        app.kubernetes.io/version: "v0.879"
     spec:
       containers:
       - envFrom:
