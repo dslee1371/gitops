@@ -15,7 +15,7 @@ resources:
 # 이미지 태그 오버레이 (필요 시 버전만 변경)
 images:
   - name: 172.10.30.11:5000/auto-coin/autotrade-binance-app
-    newTag: v0.867
+    newTag: v0.869
 
 # deployment 패치
 patchesStrategicMerge:
