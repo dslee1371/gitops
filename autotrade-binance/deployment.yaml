@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   labels:
     app: autotrade-binance
-    version: v0.877
+    version: v0.878
     app.kubernetes.io/name: autotrade-binance
-    app.kubernetes.io/version: "v0.877"
+    app.kubernetes.io/version: "v0.878"
   name: autotrade-binance
   namespace: coinauto
 spec:
@@ -30,7 +30,7 @@ spec:
       - envFrom:
         - secretRef:
             name: autotrade-binance-secret
-        image: 172.10.30.11:5000/auto-coin/autotrade-binance-app:v0.877
+        image: 172.10.30.11:5000/auto-coin/autotrade-binance-app:v0.878
         imagePullPolicy: IfNotPresent
         name: autotrade-binance
         resources: {}
