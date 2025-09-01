@@ -16,3 +16,7 @@ resources:
 images:
   - name: 172.10.30.11:5000/auto-coin/autotrade-binance-app
     newTag: v0.83
+
+# deployment 패치
+patchesStrategicMerge:
+  - patch-deploy-version.yaml
