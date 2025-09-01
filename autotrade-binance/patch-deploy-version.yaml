@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: autotrade-binance     # 실제 이름으로 교체
+  namespace: coinauto
+spec:
+  template:
+    metadata:
+      labels:
+        app: autotrade-binance
+        version: v0.83                    # ← 이미지 태그와 동일
+        app.kubernetes.io/name: autotrade-binance
+        app.kubernetes.io/version: "v0.83"
