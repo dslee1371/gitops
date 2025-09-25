@@ -17,4 +17,4 @@ resources:
 # 이미지 태그 오버레이 (필요 시 버전만 변경)
 images:
   - name: 172.10.30.11:5000/ds-portfolio/ds-portfolio-app:v0.1
-    newTag: v0.8
+    newTag: v0.9
