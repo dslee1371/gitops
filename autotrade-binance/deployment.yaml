@@ -22,15 +22,15 @@ spec:
       creationTimestamp: null
       labels:
         app: autotrade-binance
-        version: v0.879
+        version: v0.881
         app.kubernetes.io/name: autotrade-binance
-        app.kubernetes.io/version: "v0.879"
+        app.kubernetes.io/version: "v0.881"
     spec:
       containers:
       - envFrom:
         - secretRef:
             name: autotrade-binance-secret
-        image: 172.10.30.11:5000/auto-coin/autotrade-binance-app:v0.879
+        image: 172.10.30.11:5000/auto-coin/autotrade-binance-app:v0.881
         imagePullPolicy: IfNotPresent
         name: autotrade-binance
         resources: {}
