@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ds-portfolio-ta
+  name: ds-portfolio-ta
+  namespace: ds-portfolio-ta
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ds-portfolio-ta
+  template:
+    metadata:
+      labels:
+        app: ds-portfolio-ta
+    spec:
+      containers:
+      - image: 172.10.30.11:5000/ds-portfolio-ta/ds-portfolio-ta:v0.1
+        name: ds-portfolio-ta
