@@ -13,5 +13,5 @@ spec:
     - uri: { prefix: "/" }
     route:
     - destination:
-        host: ds-portfolio-ta-service.ds-portfolio.svc.cluster.local
+        host: ds-portfolio-ta-service.ds-portfolio-ta.svc.cluster.local
         port: { number: 80 }
